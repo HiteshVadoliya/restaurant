@@ -1,0 +1,21 @@
+﻿.data.address {
+    word-break: break-word;
+}
+.loadermain {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2000;
+        text-align: center;
+        display: table;
+    }
+  .loadermain div {
+      vertical-align: middle;
+      display: table-cell;
+      width: 200px;
+  }
