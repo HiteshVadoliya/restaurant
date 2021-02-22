@@ -15,7 +15,8 @@ class Login_model extends CI_Model
         $this->db->join('tbl_roles as Roles','Roles.roleId = BaseTbl.roleId');
         $this->db->where('BaseTbl.email', $email);
         $this->db->where('BaseTbl.roleId', $roles);
-        $this->db->where('BaseTbl.isDeleted', 0);
+        $this->db->where('BaseTbl.isDelete', 0);
+        $this->db->where('BaseTbl.status', 1);
         $query = $this->db->get();
         
         $user = $query->row();
@@ -40,7 +41,7 @@ class Login_model extends CI_Model
     {
         $this->db->select('userId');
         $this->db->where('email', $email);
-        $this->db->where('isDeleted', 0);
+        $this->db->where('isDelete', 0);
         $query = $this->db->get('tbl_users');
 
         if ($query->num_rows() > 0){
@@ -76,7 +77,7 @@ class Login_model extends CI_Model
     {
         $this->db->select('userId, email, name');
         $this->db->from('tbl_users');
-        $this->db->where('isDeleted', 0);
+        $this->db->where('isDelete', 0);
         $this->db->where('email', $email);
         $query = $this->db->get();
 
@@ -102,7 +103,7 @@ class Login_model extends CI_Model
     function createPasswordUser($email, $password)
     {
         $this->db->where('email', $email);
-        $this->db->where('isDeleted', 0);
+        $this->db->where('isDelete', 0);
         $this->db->update('tbl_users', array('password'=>getHashedPassword($password)));
         $this->db->delete('tbl_reset_password', array('email'=>$email));
     }

@@ -130,9 +130,17 @@ class User extends BaseController
                 $password = $this->input->post('password');
                 $roleId = $this->input->post('role');
                 $mobile = $this->security->xss_clean($this->input->post('mobile'));
+                
                 $roleId = 1;
-                $userInfo = array('email'=>$email, 'password'=>getHashedPassword($password), 'roleId'=>$roleId, 'name'=> $name,
-                                    'mobile'=>$mobile, 'createdBy'=>$this->vendorId, 'createdDtm'=>date('Y-m-d H:i:s'));
+                $userInfo = array(
+                    'email'=>$email,
+                    'password'=>getHashedPassword($password),
+                    'roleId'=>$roleId,
+                    'name'=> $name,
+                    'mobile'=>$mobile,
+                    'createdBy'=>$this->vendorId,
+                    'createdDtm'=>date('Y-m-d H:i:s'),
+                );
                 
                 $this->load->model('user_model');
                 $result = $this->user_model->addNewUser($userInfo);

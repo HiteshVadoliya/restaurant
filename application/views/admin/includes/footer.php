@@ -195,7 +195,44 @@
 <script src="<?php echo ADMIN_CSS_JS; ?>/dist/js/app.min.js" type="text/javascript"></script>
 <script src="<?php echo ADMIN_CSS_JS; ?>/js/jquery.validate.js" type="text/javascript"></script>
 <script src="<?php echo ADMIN_CSS_JS; ?>/js/validation.js" type="text/javascript"></script>
+<script src="<?= ADMIN_CSS_JS; ?>js/select2.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+<script src="<?php echo ADMIN_CSS_JS; ?>bootstrap-filestyle/js/bootstrap-filestyle.min.js" type="text/javascript"></script>
+<script src="<?= ADMIN_CSS_JS.'fileupload/js/jquery.dm-uploader.js'; ?>"></script>
+<script src="<?= ADMIN_CSS_JS.'fileupload/js/file_upload.js'; ?>"></script>
+
+
+<!-- <script src="<?= ADMIN_CSS_JS.'js/bootstrap-tagsinput.min.js'; ?>"></script> -->
+
+<?php
+$date_formate = $this->gr->get_date_formate();
+?>
 <script type="text/javascript">
+  $("select").select2({
+    allowClear: false,
+  });
+    $(document).ready(function() {      
+        
+        $('.bootstrap-tagsinput input').keydown(function( event ) {
+            if ( event.which == 13 ) {
+                $(this).blur();
+                $(this).focus();
+                return false;
+            }
+        })
+        
+    });
+    let date_formate = '<?php echo $date_formate; ?>';
+    jQuery('.datepicker').datepicker({
+        format : date_formate,
+        weekStart: 1,
+        daysOfWeekHighlighted: "6,0",
+        autoclose: true,
+        todayHighlight: true,
+    });
+
+
    var windowURL = window.location.href;
    pageURL = windowURL.substring(0, windowURL.lastIndexOf('/'));
    var x= $('a[href="'+pageURL+'"]');
@@ -224,7 +261,16 @@
        $('.treeview-menu li a').filter(function() {
            return this.href == url;
        }).parent().parent().parent().parent().parent().addClass('active');
+
+
    });
+
+   
+   function goBack() {
+     window.history.back();
+   }
+   
+
 </script>
 </body>
 </html>

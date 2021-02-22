@@ -1,13 +1,20 @@
+<?php
+$sitesetting = $this->SiteSetting_model->getSiteSetting();
+$headerInfo['site_name'] = $sitesetting[0]->site_name;
+$headerInfo['site_logo'] = $sitesetting[0]->site_logo;
+$headerInfo['site_favicon'] = $sitesetting[0]->site_favicon;
+$headerInfo['pageTitle'] = $sitesetting[0]->site_name .' '. '| Login';
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Subway | Admin System Log in</title>
+    <title><?= $headerInfo['pageTitle']; ?></title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link href="<?php echo ADMIN_CSS_JS; ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo ADMIN_CSS_JS; ?>/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,7 +25,7 @@
   <body class="login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="#"><b>SubWay</b><br>Admin Panel</a>
+        <a href="#"><b><?= $headerInfo['site_name']; ?></b><br>Admin Panel</a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Sign In</p>
@@ -48,9 +55,8 @@
                 <?php echo $success; ?>                    
             </div>
         <?php } ?>
-        
         <form action="<?php echo base_url(); ?>loginMe" method="post">
-          <div class="form-group has-feedback">
+          <div class="form-group ">
             <select name="roles" id="roles" class="form-control">
               <?php
               if( isset($roles) && !empty($roles) ) {
@@ -65,7 +71,7 @@
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="email" class="form-control" placeholder="Email" name="email" required />
+            <input type="email" class="form-control" placeholder="Email" name="email" required autocomplete="false" autofocus="true" />
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
@@ -87,6 +93,7 @@
         </form>
 
         <a href="<?php echo base_url() ?>forgotPassword">Forgot Password</a><br>
+        <a href="<?php echo base_url(ADMIN.'employee-registration') ?>">Register as Employee</a><br>
         
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->

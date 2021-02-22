@@ -98,6 +98,15 @@ define('DEFAULT_IMG',APP_URL.'res.png');
 define('DEFAULT_BANNER_IMG','res.png');
 define('IMG_SRC','public/uploads/');
 
+define('COMPANY_POLICY','public/uploads/company_policy/');
+define('IMG_RESTAURANT','public/uploads/restaurant/');
+define('IMG_TRAINING_MATERIALS','public/uploads/training_materials/');
+define('IMG_BULLETIN_BORD','public/uploads/bulletinbord/');
+define('IMG_INVOICE','public/uploads/invoice/');
+define('IMG_EMPLOYEE_DOC','public/uploads/employee/');
+define('WAIT','Wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');
+define('MyPath', 'public/uploads/files/');
+
 define('API','api/');
 define('NO','0');
 define('YES','1');
@@ -125,10 +134,12 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 /**** USER DEFINED CONSTANTS **********/
 
-define('ROLE_ADMIN',                            '1');
-define('ROLE_MANAGER',                         	'2');
-define('ROLE_EMPLOYEE',                         '3');
-define('SEGMENT',								2);
+define('ROLE_SUPERADMIN','1');
+define('ROLE_ADMIN','2');
+define('ROLE_MANAGER','3');
+define('ROLE_SHIFTINCHARGE','4');
+define('ROLE_EMPLOYEE','5');
+define('SEGMENT',2);
 
 /************************** EMAIL CONSTANTS *****************************/
 

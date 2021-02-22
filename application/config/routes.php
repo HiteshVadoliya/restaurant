@@ -87,3 +87,122 @@ $route[ADMIN.'newspaper'] = ADMIN."Newspaper";
 $route[ADMIN.'newspaper/add'] = ADMIN."Newspaper/showForm";
 $route[ADMIN.'newspaper/edit/(:any)'] = ADMIN."Newspaper/showForm/$1";
 $route[ADMIN.'newspaper/save'] = ADMIN."Newspaper/save";
+
+/*company */
+$route[ADMIN.'company'] = ADMIN."Company";
+$route[ADMIN.'company/add'] = ADMIN."Company/showForm";
+$route[ADMIN.'company/edit/(:any)'] = ADMIN."Company/showForm/$1";
+$route[ADMIN.'company/view/(:any)'] = ADMIN."Company/showView/$1";
+$route[ADMIN.'company/save'] = ADMIN."Company/save";
+
+/*restaurant */
+$route[ADMIN.'restaurant'] = ADMIN."Restaurant";
+$route[ADMIN.'restaurant/add'] = ADMIN."Restaurant/showForm";
+$route[ADMIN.'restaurant/edit/(:any)'] = ADMIN."Restaurant/showForm/$1";
+$route[ADMIN.'restaurant/view/(:any)'] = ADMIN."Restaurant/showView/$1";
+$route[ADMIN.'restaurant/save'] = ADMIN."Restaurant/save";
+
+/*admin */
+$route[ADMIN.'user'] = ADMIN."Users";
+$route[ADMIN.'user/add'] = ADMIN."Users/showForm";
+$route[ADMIN.'user/edit/(:any)'] = ADMIN."Users/showForm/$1";
+$route[ADMIN.'user/view/(:any)'] = ADMIN."Users/showView/$1";
+$route[ADMIN.'user/save'] = ADMIN."Users/save";
+
+// $route[ADMIN.'user/(:any)'] = ADMIN."Users/index/$1";
+/*$route[ADMIN.'user/add/(:any)'] = ADMIN."Users/showForm/$1";
+$route[ADMIN.'user/edit/(:any)/(:any)'] = ADMIN."Users/showForm/$1/$2";
+*/
+
+/*training materials */
+$route[ADMIN.'training_materials'] = ADMIN."TrainingMaterials";
+$route[ADMIN.'training_materials/add'] = ADMIN."TrainingMaterials/showForm";
+$route[ADMIN.'training_materials/edit/(:any)'] = ADMIN."TrainingMaterials/showForm/$1";
+$route[ADMIN.'training_materials/view/(:any)'] = ADMIN."TrainingMaterials/showView/$1";
+$route[ADMIN.'training_materials/save'] = ADMIN."TrainingMaterials/save";
+
+/*bulleting board */
+$route[ADMIN.'bulletinbord'] = ADMIN."BulletinBord";
+$route[ADMIN.'bulletinbord/add'] = ADMIN."BulletinBord/showForm";
+$route[ADMIN.'bulletinbord/edit/(:any)'] = ADMIN."BulletinBord/showForm/$1";
+$route[ADMIN.'bulletinbord/view/(:any)'] = ADMIN."BulletinBord/showView/$1";
+$route[ADMIN.'bulletinbord/save'] = ADMIN."BulletinBord/save";
+
+/*cleaning_heading */
+$route[ADMIN.'cleaning_heading'] = ADMIN."CleaningHeading";
+$route[ADMIN.'cleaning_heading/add'] = ADMIN."CleaningHeading/showForm";
+$route[ADMIN.'cleaning_heading/edit/(:any)'] = ADMIN."CleaningHeading/showForm/$1";
+$route[ADMIN.'cleaning_heading/view/(:any)'] = ADMIN."CleaningHeading/showView/$1";
+$route[ADMIN.'cleaning_heading/save'] = ADMIN."CleaningHeading/save";
+
+/*cleaning */
+$route[ADMIN.'cleaning'] = ADMIN."Cleaning";
+$route[ADMIN.'cleaning/add'] = ADMIN."Cleaning/showForm";
+$route[ADMIN.'cleaning/edit/(:any)'] = ADMIN."Cleaning/showForm/$1";
+$route[ADMIN.'cleaning/view/(:any)'] = ADMIN."Cleaning/showView/$1";
+$route[ADMIN.'cleaning/save'] = ADMIN."Cleaning/save";
+
+/* phone dictionary */
+$route[ADMIN.'phone-dictionary'] = ADMIN."PhoneDictionary/showView/";
+
+/* invoice */
+$route[ADMIN.'invoice'] = ADMIN."Invoice";
+$route[ADMIN.'invoice/add'] = ADMIN."Invoice/showForm";
+$route[ADMIN.'invoice/edit/(:any)'] = ADMIN."Invoice/showForm/$1";
+$route[ADMIN.'invoice/view/(:any)'] = ADMIN."Invoice/showView/$1";
+$route[ADMIN.'invoice/save'] = ADMIN."Invoice/save";
+
+/* suggestion */
+$route[ADMIN.'suggestion'] = ADMIN."Suggestion";
+$route[ADMIN.'suggestion/add'] = ADMIN."Suggestion/showForm";
+$route[ADMIN.'suggestion/edit/(:any)'] = ADMIN."Suggestion/showForm/$1";
+$route[ADMIN.'suggestion/view/(:any)'] = ADMIN."Suggestion/showView/$1";
+$route[ADMIN.'suggestion/save'] = ADMIN."Suggestion/save";
+
+/* Employee register */
+// $route[ADMIN.'employee-register'] = ADMIN."Employee";
+// $route[ADMIN.'employee-register/save'] = ADMIN."Employee/save";
+
+// $route[ADMIN.'employee/add'] = ADMIN."Employee/showForm";
+// $route[ADMIN.'employee/edit/(:any)'] = ADMIN."Employee/showForm/$1";
+
+/*
+$route[ADMIN.'employee'] = ADMIN."Employee";
+$route[ADMIN.'employee/view/(:any)'] = ADMIN."Employee/showView/$1";
+$route[ADMIN.'employee/save'] = ADMIN."Employee/save";
+$route[ADMIN.'employee/save/employee'] = ADMIN."Employee/saveEmployee";
+
+$route[ADMIN.'employee/add/(:any)'] = ADMIN."Employee/showForm/$1";
+$route[ADMIN.'employee/edit/(:any)/(:any)'] = ADMIN."Employee/showForm/$1/$2";
+*/
+/*manager */
+$route[ADMIN.'employee'] = ADMIN."Employee";
+$route[ADMIN.'employee/add'] = ADMIN."Employee/showForm";
+$route[ADMIN.'employee/edit/(:any)'] = ADMIN."Employee/showForm/$1";
+$route[ADMIN.'employee/view/(:any)'] = ADMIN."Employee/showView/$1";
+$route[ADMIN.'employee/save'] = ADMIN."Employee/save";
+
+$route[ADMIN.'employee-registration'] = ADMIN."EmployeeRegister";
+$route[ADMIN.'employee-registration/save'] = ADMIN."EmployeeRegister/save";
+$route[ADMIN.'employee-registration/save-paperwork'] = ADMIN."EmployeeRegister/savePaperWork";
+
+/*manager */
+$route[ADMIN.'manager'] = ADMIN."Manager";
+$route[ADMIN.'manager/add'] = ADMIN."Manager/showForm";
+$route[ADMIN.'manager/edit/(:any)'] = ADMIN."Manager/showForm/$1";
+$route[ADMIN.'manager/view/(:any)'] = ADMIN."Manager/showView/$1";
+$route[ADMIN.'manager/save'] = ADMIN."Manager/save";
+
+/* admin */
+$route[ADMIN.'adminuser'] = ADMIN."AdminUser";
+$route[ADMIN.'adminuser/add'] = ADMIN."AdminUser/showForm";
+$route[ADMIN.'adminuser/edit/(:any)'] = ADMIN."AdminUser/showForm/$1";
+$route[ADMIN.'adminuser/view/(:any)'] = ADMIN."AdminUser/showView/$1";
+$route[ADMIN.'adminuser/save'] = ADMIN."AdminUser/save";
+
+/* shift incharge */
+$route[ADMIN.'shiftincharge'] = ADMIN."ShiftIncharge";
+$route[ADMIN.'shiftincharge/add'] = ADMIN."ShiftIncharge/showForm";
+$route[ADMIN.'shiftincharge/edit/(:any)'] = ADMIN."ShiftIncharge/showForm/$1";
+$route[ADMIN.'shiftincharge/view/(:any)'] = ADMIN."ShiftIncharge/showView/$1";
+$route[ADMIN.'shiftincharge/save'] = ADMIN."ShiftIncharge/save";

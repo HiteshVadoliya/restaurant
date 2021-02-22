@@ -19,3 +19,21 @@
       display: table-cell;
       width: 200px;
   }
+.cleaning_view_table .view_th {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+.cleaning_view_table .view_th_role {
+  text-align: center;
+  background-color: #3c8dbc;
+  color: #fff;
+  width: 80%; 
+}
+.cleaning_view_table .res_phone {
+  float: right;
+} 
+.error {
+    color: red;
+    font-weight: 400;
+}
