@@ -206,3 +206,12 @@ $route[ADMIN.'shiftincharge/add'] = ADMIN."ShiftIncharge/showForm";
 $route[ADMIN.'shiftincharge/edit/(:any)'] = ADMIN."ShiftIncharge/showForm/$1";
 $route[ADMIN.'shiftincharge/view/(:any)'] = ADMIN."ShiftIncharge/showView/$1";
 $route[ADMIN.'shiftincharge/save'] = ADMIN."ShiftIncharge/save";
+
+
+
+/* week incharge */
+$route[ADMIN.'week'] = ADMIN."Week";
+$route[ADMIN.'shiftincharge/add'] = ADMIN."ShiftIncharge/showForm";
+$route[ADMIN.'shiftincharge/edit/(:any)'] = ADMIN."ShiftIncharge/showForm/$1";
+$route[ADMIN.'shiftincharge/view/(:any)'] = ADMIN."ShiftIncharge/showView/$1";
+$route[ADMIN.'shiftincharge/save'] = ADMIN."ShiftIncharge/save";

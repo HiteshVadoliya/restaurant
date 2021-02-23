@@ -243,6 +243,16 @@
                      <li><a href="<?php echo ADMIN_LINK; ?>sitesetting"><i class="fa fa-circle-o"></i>General Setting</a></li>
                   </ul>
                </li>
+
+
+               <li class="header">Week</li>
+               <li class="">
+                  <a href="<?php echo ADMIN_LINK; ?>week">
+                  <i class="fa fa-cogs"></i> <span>week</span>
+                  <span class="pull-right-container">
+                  </span>
+                  </a>
+               </li>
             </ul>
          </section>
       </aside>
