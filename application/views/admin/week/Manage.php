@@ -140,7 +140,7 @@
   mobiscroll.setOptions({
     theme: 'material',
     themeVariant: 'light',
-    
+
 });
 
 $(function () {
@@ -162,14 +162,6 @@ $(function () {
     });
 });
 </script>
-
-
-
-
-
-
-
-
 
 
 
